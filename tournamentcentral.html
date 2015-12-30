@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Innovation Tournaments - Tournament Central</title>
+      <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+</head>
+<body>
+    <nav>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Tournament Central<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+              <ul id="dropdown1" class="dropdown-content">
+                  <li><a href="#!">Tournament 1</a></li>
+                  <li><a href="#!">Tournament 2</a></li>
+                  <li><a href="#!">Tournament 3</a></li>
+              </ul>
+        <li><a class="modal-trigger" href="#modaljoin">Join Tournament</a></li>
+        <li><a class="modal-trigger" href="#modal1">Send Feedback</a></li>
+        <li><a class="" href="#">Tournament Admins</a></li>
+      </ul>
+        
+      <ul id="slide-out" class="side-nav">
+        <li><a class="dropdown-button" href="#!" data-activates="dropdownSmall">Tournament Central<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+        <ul id="dropdownSmall"   class="dropdown-content">
+            <li><a href="#!">Tournament 1</a></li>
+            <li><a href="#!">Tournament 2</a></li>  
+            <li><a href="#!">Tournament 3</a></li>  
+        </ul>
+        <li><a class="modal-trigger" href="#modaljoin">Join Tournament</a></li>
+        <li><a class="modal-trigger" href="#modal1">Send Feedback</a></li>
+        <li><a class="" href="#">Tournament Admins</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </nav>
+
+    <main>
+     <h2 class="center">Tournament 1</h2> 
+     <h5 class="center">Current Round: 1A</h5>
+     <div class="col s12 center">
+        <div class="row">
+            <div id="clock"></div>     
+        </div>   
+     </div>
+
+ <!-- begin dynamic content --> 
+ 
+        
+   <div class="row ideaSubmit">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" length="144"></textarea>
+          <label for="textarea1">Explain your idea in 144 characters or less</label>
+        </div>
+      </div>
+    </form>
+  </div>       
+
+        
+        
+        <div class="container more-ideas">
+  <input class="btn" type="button" value="Add another idea" onclick="addIdea()">
+        
+</div>
+        
+    <script>
+    
+        function addIdea() {
+            $(".more-ideas").append($(".ideaSubmit").html());
+        };
+        
+    </script>
+        
+<!--
+        <input class="btn" type="button" value="Remove" onclick="removeContent()" />        
+        
+-->
+  
+<!--        
+        
+ <span class="btn" id="remove">Remove elements</span>
+
+<a class="btn" onclick="$('#roundToggle').addClass('#round1A')">Add elements</a>
+        
+<div class="roundToggle">
+
+</div>      
+
+<div class="round1A">
+   <ul class="collapsible popout" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">stars</i>Idea one</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">stars</i>Idea two</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">stars</i>Idea three</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+    </ul>
+</div>         
+        
+ -->
+        
+    
+  <!-- Feedback Modal Structure -->
+      <div id="modal1" class="modal bottom-sheet modal-fixed-footer">
+        <div class="modal-content">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">We're still working out the kinks and could use your help.  What feedback would you like to provide?</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+        </div>
+      </div>
+<!-- End Feedback Modal -->   
+
+  <!-- Join Tournament Modal Structure -->
+      <div id="modaljoin" class="modal bottom-sheet modal-fixed-footer">
+        <div class="modal-content">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Enter Tournament ID" id="tournament_id" type="text" class="validate">
+                </div>
+              </div>
+              <div class="row">
+                <p>The tournament sponsor should have emailed you this id.  </p>  
+              </div>    
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Join!</a>
+        </div>
+      </div>
+<!-- End Join Tournament Modal -->
+        
+    </main>
+    
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        Handcrafted by Boeing's Legion of Code
+        </div>
+      </div>
+    </footer>
+    
+      <!--  Scripts-->
+          <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+          <script src="js/materialize.js"></script>
+          <script src="js/init.js"></script>
+          <script src="js/jquery.countdown.js"></script>
+</body>
+
+</html>
